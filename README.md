@@ -1,39 +1,43 @@
-# DICO extension skeleton
+# DICO VS Code Extension
 
-Squelette d’extension VS Code pour fiches lexicographiques `.dico`.
+Extension VS Code pour fiches lexicographiques `.dico`.
 
-## Ce bundle fournit déjà
+## Fonctionnalités
 
-- coloration syntaxique de base
-- parseur structuré minimal
-- diagnostics VS Code
-- validation de quelques règles
-- compilation en représentation interne
+- coloration syntaxique (sections, actants, fonctions lexicales, exemples, sources, annotations)
+- configuration d’édition DICO (`%` en commentaire de ligne, paires auto-fermantes, etc.)
+- diagnostics de structure (en-tête, sections connues, sections dupliquées par lexie)
+- compilation interne pour inspection
 - panneau `Entry Inspector`
-- commande `DICO: Compile Current File`
-- commande `DICO: Validate Workspace`
+- commandes:
+  - `DICO: Compile Current File`
+  - `DICO: Validate Workspace`
 
-## Installation
+## Développement
 
 ```bash
 npm install
 npm run build
 ```
 
-Puis ouvrir le dossier dans VS Code et lancer l’extension en mode développement (`F5`).
+Ensuite:
 
-## Limites actuelles
+1. Ouvrir le dossier dans VS Code.
+2. Lancer `F5` (profil `Run Extension`).
+3. Pour itérer rapidement, lancer `npm run watch` dans un terminal.
 
-- parseur volontairement minimal
-- pas de LSP
-- pas de complétion/hover/navigation
-- validation logique encore rudimentaire
+Quand les changements ne se reflètent pas:
+
+1. arrêter le debug (`Shift+F5`)
+2. relancer `F5`
+3. dans la fenêtre Extension Development Host: `Developer: Reload Window`
+
+## État actuel
+
+- pas de LSP (complétion/hover/navigation non implémentés)
+- validation sémantique avancée partielle
 - pas d’index global du lexique
 
-## Étapes suivantes recommandées
+## Suivi des tâches
 
-1. stabiliser la vraie grammaire des fiches
-2. enrichir le parseur section par section
-3. compléter la table des fonctions lexicales
-4. ajouter un index du workspace
-5. basculer ensuite vers un language server si nécessaire
+Voir [TODO.md](./TODO.md).
