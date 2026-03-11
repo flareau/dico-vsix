@@ -32,6 +32,17 @@ Quand les changements ne se reflètent pas:
 2. relancer `F5`
 3. dans la fenêtre Extension Development Host: `Developer: Reload Window`
 
+## Packaging (repo source-only)
+
+Ce dépôt peut rester sans `dist/` versionné.
+
+Le build est exécuté automatiquement pendant le packaging:
+
+- `npm run prepack` (via `npm pack`)
+- `npm run vscode:prepublish` (via `vsce package` / `vsce publish`)
+
+Les fichiers publiables sont limités par `package.json > files`.
+
 ## État actuel
 
 - pas de LSP (complétion/hover/navigation non implémentés)
