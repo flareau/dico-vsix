@@ -1,5 +1,6 @@
 import * as vscode from "vscode";
 import { registerInspectCurrentFile } from "./commands/inspectCurrentFile";
+import { registerShowStructuredData } from "./commands/showStructuredData";
 import { registerValidateWorkspace } from "./commands/validateWorkspace";
 import { InspectorViewProvider } from "./views/inspectorViewProvider";
 import { registerDocumentWatcher } from "./vscode/documentWatcher";
@@ -15,6 +16,7 @@ export function activate(context: vscode.ExtensionContext): void {
 
   registerDocumentWatcher(context, diagnostics, inspector);
   registerInspectCurrentFile(context, inspector);
+  registerShowStructuredData(context);
   registerValidateWorkspace(context);
 }
 

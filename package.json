@@ -39,6 +39,10 @@
         "title": "DICO: Inspect Current File"
       },
       {
+        "command": "dico.showStructuredData",
+        "title": "DICO: Show Structured Data"
+      },
+      {
         "command": "dico.validateWorkspace",
         "title": "DICO: Validate Workspace"
       }
