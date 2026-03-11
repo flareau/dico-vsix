@@ -8,13 +8,8 @@
     "vscode": "^1.78.0"
   },
   "categories": ["Programming Languages"],
+  "icon": "media/dico.png",
   "main": "./dist/extension.js",
-  "activationEvents": [
-    "onLanguage:dico",
-    "onCommand:dico.compileCurrentFile",
-    "onCommand:dico.validateWorkspace",
-    "onView:dico.inspector"
-  ],
   "contributes": {
     "languages": [
       {
@@ -54,7 +49,8 @@
       "dico": [
         {
           "id": "dico.inspector",
-          "name": "Entry Inspector"
+          "name": "Entry Inspector",
+          "icon": "media/dico.svg"
         }
       ]
     }
