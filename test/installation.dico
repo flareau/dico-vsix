@@ -1,0 +1,195 @@
+installation /E~stalasjO~/
+nom, féminin
+  2.
+    EX
+      "Dans leur ouvrage sur les politiques de vie étudiante des universités, F. Kunian et G. Houzel (2009) signalent l'existence de guichets uniques offrant un ensemble de services pour faciliter les démarches nécessaires à l' installation des étudiants." (http://veille-et-analyses.ens-lyon.fr/LettreVST/59-decembre-2010.php?onglet=pdf)
+      "Nous allons voir que les questions de leur sélection et de leurs conditions d' installation ou de retour constituent les principales pierres d'achoppement dans l'édification d'une politique communautaire d'immigration." (http://barthes.enssib.fr/TERRA/article535.html)
+    DEF
+      ~ de Y par X dans Z = fait pour la personne X d'installer#2 l'individu Y dans le lieu Z
+    SEM
+      installation#2(X, Y, Z) = installer#2(X, Y, Z)
+    TR
+      ~                                 "D'après le crédit Mutuel, \"Jeunes Agriculteurs +\" combine offre de crédits et services spécifiques facilitant l' installation ." (http://www.agriavis.com/famille-318-aides+et+prets+a+l+installation-5.html)
+      ~ Adj=Y                           "Toutes ces découvertes tendent à déplacer vers le nord le centre de gravité de l' installation gallo-romaine du Haut-Empire et complètent la trame de l'occupation antique." (https://journals.openedition.org/adlfi/6875)
+      ~ de N=Y                          "Elle est devenue un pôle d'excellence en matière de textiles innovants et d'images et poursuit le développement de ses activités en favorisant l' installation d'entreprises." (https://vianova-groupe.fr/programmes-neufs/logements-neufs-hauts-de-france/nord/tourcoing-59200/beau-sejour)
+      ~ dans N=Z                        "Elles autorisent en effet à évaluer sommairement le degré de mobilité des Lyonnais en mesurant leur durée d' installation dans un des quartiers de la cité." (https://books.openedition.org/pul/12708?nomobile=1)
+      ~ de N=Y Locin N=Z                "Installation dans les chambres après le déjeuner." (http://www.ce-evasion.fr/chine/classiques-et-minorites-de-chine-15j-12n-limite-a-24-pers_339383)
+    FL
+      QSyn = @placement#1               "Elle a 5 filles, 3 s'occupent d'elle dont une presque à temps complet, et mes 2 autres tantes ne font que créer des problèmes, elles s'opposent au placement en maison de retraite, contestent même qu'elle a un alzheimer, alors qu'elles ne l'avaient pas vue depuis plus d'un an.." (http://michel.cavey-lemoine.net/spip.php?article13&debut_forums=20)
+      QSyn = @logement#2                "Le colloque \"Le logement des jeunes : un enjeu d'innovation sociale et urbaine\" organisé le 20 novembre 2017 par l'AFEV a été l'occasion d'échanger autour des Kolocations à projets solidaires (Kaps) et sur la nécessaire distinction entre logement et habitat." (https://resaue.caue-idf.fr/modules/webportal/results.php?op=seealso&idbase=10&idsearch=&search_mode=sdp&fields=Descripteurs_AUE&value=JEUNE)
+      QAnti = @délogement               "C'est une véritable campagne de délogement des plus précaires qui est en cours dans la banlieue Nord de Paris, après Saint-Ouen en août et Saint-Denis en juillet, 71 réfugiés syriens dont 38 enfants ont été expulsés ce 29 août, lors d'une opération de police dans le centre de Saint Denis." (https://revolutionpermanente.fr/VIDEO-Des-familles-syriennes-expulsees-interpellent-le-ministre-du-logement)
+      QAnti = @expulsion                "La préfecture des Hauts-de-Seine a saisi lundi matin l'agence régionale de la santé pour enquêter sur l' expulsion d'une nonagénaire de sa maison de retraite privée à Chaville (Hauts-de-Seine), révélée dimanche par l'Echo républicain." (http://abo.lettreducadre.fr/PAR_TPL_IDENTIFIANT/3615/TPL_CODE/TPL_HYPERACTU_FICHE/2072-actualite.htm)
+      V0 = @installer#2                 "Ce qui fut confirmé par Nicolaï, qui demanda à Théofried d'aider au chantier, et à Aureane d' installer sa tante et sa sœur dans le bâtiment." (http://miradelphia.forumpro.fr/t14941-de-retour-a-dyriet)
+      Magn--temp = durable              "Cependant l' installation durable des Algériens, ainsi que celle de leur famille, n'est pas toujours envisagée avec sérénité par les pouvoirs publics." (http://gisti.org/spip.php?article3860)
+      AntiMagn--temp = provisoire       "Le site est choisi parmi quatre types d' installations provisoires (centres d'accueil ou de transit, camps spontanés, installations temporaires planifiées et extensions d'installations temporaires)." (http://helid.digicollection.org/fr/d/Js2680f/3.4.6.html)
+      Func0 = avoir_lieu                "L' installation a lieu le mercredi 17 juin 1896." (http://evariste.lefeuvre.free.fr/associat/NDT/ConseilFabrique.htm)
+      Oper1 = procéder [à Dét ~]        "Après la signature du contrat d'hébergement par l'usager, le travailleur social du CHRS Urgence procède à son installation sur le lieu d'hébergement." (http://www.association-alc.net/frontblocks/navigation/contents.asp?ID_THESAURUS=62&ID_THESAURUS_NODES=1579&ID_THESAURUS_OBJECTS=34)
+  3.
+    EX
+      "Elle est devenue un pôle d'excellence en matière de textiles innovants et d'images et poursuit le développement de ses activités en favorisant l' installation d'entreprises." (https://vianova-groupe.fr/programmes-neufs/logements-neufs-hauts-de-france/nord/tourcoing-59200/beau-sejour)
+      "Cette création est rapidement suivie par l installation de la Lloyd s de Londres" (https://docplayer.fr/1029621-L-assurance-vie-un-produit-multiforme-devenu-le-pilier-de-l-epargne-des-menages.html)
+    DEF
+      ~ de Y par X dans Z = fait pour la personne X d'installer#3 la personne morale Y dans le lieu Z
+    SEM
+      installation#3(X, Y, Z) = installer#3(X, Y, Z)
+    TR
+      ~                                 "D'après le crédit Mutuel, \"Jeunes Agriculteurs +\" combine offre de crédits et services spécifiques facilitant l' installation ." (http://www.agriavis.com/famille-318-aides+et+prets+a+l+installation-5.html)
+      ~ Adj=Y                           "Toutes ces découvertes tendent à déplacer vers le nord le centre de gravité de l' installation gallo-romaine du Haut-Empire et complètent la trame de l'occupation antique." (https://journals.openedition.org/adlfi/6875)
+      ~ de N=Y                          "Elle est devenue un pôle d'excellence en matière de textiles innovants et d'images et poursuit le développement de ses activités en favorisant l' installation d'entreprises." (https://vianova-groupe.fr/programmes-neufs/logements-neufs-hauts-de-france/nord/tourcoing-59200/beau-sejour)
+      ~ dans N=Z                        "Elles autorisent en effet à évaluer sommairement le degré de mobilité des Lyonnais en mesurant leur durée d' installation dans un des quartiers de la cité." (https://books.openedition.org/pul/12708?nomobile=1)
+      ~ de N=Y Locin N=Z                "Je suis étonné qu'il y ait tant de réticence à l' installation d'un chantier de démolition de navires à la Seyne; de tout temps on a toujours démoli des navires à cet endroit." (http://forummarine.forumactif.com/t3207-le-probleme-de-la-fin-des-navires-de-la-marine-nationale)
+    FL
+      QSyn = @implantation              "Avec leurs trois usines, les trois constructeurs disposeront d'une capacité totale de production en Russie de 1,3 million d'unités par an en 2012 : Avtoframos, l' implantation industrielle moscovite de Renault, l'usine Nissan de Saint-Pétersbourg et le site d'avtovaz à Togliatti." (http://docplayer.fr/1799410-Atlas-renault-edition-mars-2011-changeons-de-vie-changeons-l-automobile.html)
+    + QSyn = @ouverture                 
+      QAnti = @fermeture                "Treban, une boulangerie , une épicerie... Et puis c'est tout, depuis la fermeture récente de L'Auberge du Bocage, l'ultime restaurant du bourg." (https://www.lamontagne.fr/moulins/loisirs/vie-pratique-consommation/2017/05/11/les-cafes-associatifs-se-multiplient-autour-de-moulins_12398429.html)
+      V0 = @installer#3                 "Durant la seconde guerre mondiale les allemands installèrent une chaîne de montage du Fieseler Storch dans les usines occupées de la firme Morane Saulnier." (http://groupeaeronefs.free.fr/mono29.htm)
+      QS2 = @entreprise                 "Découvrez les opportunités d' installation de votre entreprise dans la nouvelle commune du Val d'Europe, principal centre urbain et d'affaires de l'est de l'Ile-de-France." (https://immobilier.cbre.fr/location-bureaux-par-ville.aspx?Page=4)
+      Magn--temp = durable              "Pour une installation durable, la structure propose des terres, un soutien technique et administratif, voire un portage pour la commercialisation." (https://www.francebleu.fr/infos/agriculture-peche/agritest-propose-aux-futurs-agriculteurs-de-vaucluse-de-se-tester-1535699397)
+      AntiMagn--temp = provisoire       "Installation provisoire de l'école de filles dans la mairie-école, construction de deux cloisons mobiles : devis estimatif, correspondance (1896)." (http://archives-communales-ain.fr/index.php/villebois-ain-france-chateau-vougy)
+      Oper1 = procéder [à Dét ~]        "Une première en France pour le spécialiste de la location-gestion de palettes qui a déjà procédé à l'installation d'une dizaine de centres intégrés comme celui-ci en Espagne, au Portugal et au Benelux." (http://www.voxlog.fr/actualite/1803/lpr-ouvre-un-centre-de-tri-integre-chez-intermarche)
+  4.
+    EX
+      "Les dates et délais de livraison et/ou d' installation ne sont donné qu'a titre indicatif et sous toutes réserves." (https://www.dvision.be/First_files/CONDITIONS-%20GENERALES%20DE%20LOCATION.htm)
+      "Avant ce 9 janvier, l'échevin brainois de l'environnement avait évoqué l' installation d'un filtre dont l'acquisition s'élevait, à elle seule, à quelque 80.000 euros." (http://www.cdh-wallonie.be/notre-action-au-pw/archives/questions-orales/le-probleme-de-pollution-du-zoning-des-tuileries-dhennuyeres?searchterm=None)
+      "Il faudrait l' installation d'une rampe pour aider les petits à descendre en toute sécurité l'escalier extérieur." (http://www.ecmadice.ec.cc-pays-de-gex.fr/ce151005.htm)
+      "Clients actuels de Bell Si vous êtes un client actuel du service Internet de Bell, celui-ci ne sera pas disponible pendant l' installation ." (https://entreprise.bell.ca/soutien/petites-entreprises/tele/fibe/installation-pendant)
+      "Vente et installation de stores et volets roulants sur-mesure pour maison Villefranche Sur Saône 69" (https://www.rideauxservicesfrance.fr/vente+et+installation+de+stores+et+volets+roulants+sur-mesure+pour+maison+villefranche+sur+saone+69-z153)
+    DEF
+      ~ de Y par X dans Z = fait pour la personne X d'installer#4 la chose Y dans le lieu Z
+    SEM
+      installation#4(X, Y, Z) = installer#4(X, Y, Z)
+    TR
+      ~                                 "Construction; réparation; services d' installation ." (https://docplayer.fr/729836-Cette-note-contient-les-informations-suivantes.html)
+      ~ Adj=X                           "Bref, une installation professionnelle comme on aimerai en voir en France." (http://h2c-distribution.over-blog.com/page/5)
+      ~ par N=X                         "Concernant ce type de tubage et surtout pour un chauffage au bois je vous conseille de faire réaliser l' installation par un professionnel car les normes de sécurité sont draconiennes!" (https://expert.ooreka.fr/membre/reponse/1321/reflexe-energie-62-80-dz/vote/9)
+      ~ de N=Y                          "Installation d'un système de ventilation mécanique ou aération fréquente de toutes les pièces du logement en ouvrant les fenêtres" (https://saintpons.fr/vivre-votre-ville/urbanisme-et-environnement/2015-02-03-13-04-48?audience=Particuliers&xml=F20599&tmpl=component)
+      ~ Locin N=Z                       "En cas d' installation dans un meuble de télévision ou autre espace clos, Attention prenez l'écran plasma par la poignée située au-dessous et tenez-le par le haut de l'autre main." (https://mesnotices.20minutes.fr/manuel-notice-mode-emploi/PIONEER/PDK-TS01-_F)
+      ~ de N=Y par N=X                  "Le prix de l' installation de la wallbox par un professionnel tiens compte de ce materiel et viens s'ajouter au prix de la wallbox elle-même." (http://amperiste.fr/article/wallbox-trop-chere-faites-la-vous-meme)
+      ~ Adj=X de N=Y                    "En général, l' installation professionnelle de deux types de revêtement transparent est habituellement exigé." (http://questioneo.fr/3475?show=3476)
+      ~ de N=Y Locin N=Z                "L' installation de l'éolienne au sommet de la tour s'effectue à l'aide d'une grue ou d'une perche de montage, pour les petites installations on peut installer une poutre de levage au sommet de la tour où l'on passera un câble qui permettra d'y hisser la Nacelle et ses composantes." (https://eolienne.f4jr.org/auto-construction?s%5B%5D=capacit%C3%A9)
+    FL
+      QSyn = @placement#2               "Elles peuvent être accordées pour de nombreux travaux : installation d'une VMC, placement d'une pompe à chaleur, remplacement des menuiseries extérieures, travaux de toiture ou d'isolation, etc." (https://www.entrepreneurs-du-batiment.be/charleroi.htm)
+      QSyn = @pose                      "Pose d'un insert avec tubage, dans un sejour avec un foyer de : Profondeur: 45 cm Hauteur: 70 cm Longueur: 105 cm Chauffage d'agrément - Catégorie de client : un particulier/propriétaire - Raison pour demander un devis : les travaux sont à effectuer - couverts par une assurance" (https://www.trouverunartisan.fr/chapeaux-de-cheminee-ansouis)
+      QAnti = @retrait                  "Remplacement de 2 vieux radiateurs en fonte qui ne tiennent plus, dans 2 pièces distinctes situées au 1e étage (travail complet : retrait des anciens radiateurs, installation des nouveaux, élimination des 2 radiateurs ôtés, remise en route du circuit de chauffage, etc)" (https://www.casius.be/fr/plombier-installateur/brabant-wallon/houtain-le-val)
+      Anti = @désinstallation#1         "Dans le forfait mariage, vous avez l'installation et la désinstallation du matériel DJ, son et lumière ainsi qu'un animateur DJ (moi) qui vous fera danser jusqu'au petit matin !" (https://www.mariages.net/musique-mariage/dj-from-paris--e147298)
+      V0 = @installer#4                 "Ils leur fallait quelques jours pour installer les cuisines, la cantine et les toilettes." (http://colliotte.free.fr/scoutisme.htm)
+      S1 = @installateur#1              "Installateur de serrure Boigny" (http://www.ipconvergence.fr/serrurier-pas-cher/Boigny)
+      S2 = @installation#5              "Cette installation est grandement recommandée à toutes les personnes qui utilisent au moins 50% de leur électricité le soir ou le weekend." (https://www.bluebook.be/electricite-namur.htm)
+      QSinstr = @outil                  "Installation difficile avec des outils dont je ne suspectais pas même l'existence." (http://lafillequi.cowblog.fr/meta/v%C3%A9lo+maudite/1.html)
+      Able2 = @installable#1            "L'évacuation orientable rend le bâti-support installable dans toutes les configurations de pose." (https://www.tereva-direct.fr/A-541323-aquance-bati-support-autoportant-calu-plaque-double-touche-blanche-calu-offerte)
+    + QResult2 = @fonctionner           
+      Ver = réussi                      "En effet, un certain nombre de connaissances techniques et de compétences pratiques sont nécessaires pour une installation réussie ." (https://gaz-tarif-reglemente.fr/maitriser-sa-consommation/travaux/ventilation/vmc/vmc-hygroreglable.html)
+      Bon = bon                         "Une bonne installation sera aussi efficace dans la prévention des risques que dans l'action face à un problème, pour protéger les biens et les habitants d'une propriété." (https://www.houzz.fr/magazine/domotique-quand-la-technologie-veille-sur-votre-securite-stsetivw-vs~81465357)
+        ! Ver
+    + AntiVer = mauvaise                
+      Oper1 = faire [Dét ~]             "Bonjour On a déjà fait l installation du visiophone mais nous pensons qu il y a un problème de réglage." (https://youpijob.fr/annonces/bricolage/electricite/domotique/bondy)
+      Oper1 = effectuer [Dét ~]         "Celui-ci effectue l' installation de cuisine, du lavabo, du WC, etc. au moyen de sanitaires." (http://plombier-fauville-en-caux.evaloria.fr/)
+      Oper1 = réaliser [Dét ~]          "Installée à Plouguerneau et certifiée RGE, notre entreprise BESCOND COUVERTURE réalise l' installation et la rénovation de toiture en ardoise, dans le respect de la règlementation et des normes en vigueur." (https://www.bescond-couverture.fr/nos-prestations/pose-de-gouttiere-fenetres-de-toit-plouguerneau.html)
+      Oper1 = procéder [à Dét ~]        "Fuite et perte de débit : Après avoir procédé à l' installation de cet adoucisseur d'eau pas cher, certains acheteurs ont constaté une diminution du flux de circulation d'eau." (https://lesentimentparfait.fr/bricolage/le-meilleur-adoucisseur-deau)
+      IncepOper1 = débuter [Dét ~]      "Vous devez prendre des mesures scrupuleuses avant d'acheter votre pergola, assurez-vous avant de débuter l'installation que l'emplacement que vous avez prévu est suffisamment grand." (https://www.m-habitat.fr/pergolas/types-de-pergola/pergolas-de-jardin-1048_A)
+      FinOper1 = terminer [Dét ~]       "Déjà, il faudra lire minutieusement la notice, une fois avoir terminé l' installation du spa." (http://www.evital.fr/spa/comment-utiliser-correctement-un-spa.html)
+  5.
+    EX
+      "Les discussions ont porté sur les services, programmes et installations disponibles pour les jeunes et sur la façon dont tous les partenaires pourraient collaborer pour le bénéfice des jeunes à risque." (https://www.justice.gc.ca/fra/fina-fund/jp-cj/jj-yj/ps-fp/articles/part.html)
+      "L'Ontario a également établi des limites visant les rejets admissibles pour certaines raffineries et installations de fabrication de produits chimiques." (http://www.ec.gc.ca/ese-ees/default.asp?lang=Fr&n=136D3FBF-1)
+      "L' installation se compose d'une cuve (généralement de 7 à 10 m3), enterrée ou non, équipée d'un trop-plein, d'un regard pour l'entretien et éventuellement d'un système d'aération." (http://www.habitatnaturel.fr/espace-ressources/19-Eau-de-pluie-et-assainissement/40-Recuperer-leau-de-pluie)
+      "Ce type d' installations ne produit en effet à pleine puissance que quelques heures par an." (https://www.lest-eclair.fr/id60497/article/2019-04-25/enedis-acteur-de-la-transition-energetique)
+    DEF
+      ~ de Y de X dans Z = objet Y qui résulte de l'~#4 de Y par la personne X dans le lieu Z
+    SEM
+      installation#5(X, Y, Z) = r:résulter(Y, i) & i:installation#4(X, Y, Z)
+    TR
+      ~                                 "Ne pas surdimensionner l'installation au risque d'abaisser la production unitaire (ou le rendement global) des panneaux. es autres énergies dépense annuelle faible (voir lien : Argus des énergies / AJENA)" (http://www.energie-climat.hautes-alpes.fr/index.php/toutes-les-realisations/135-installation-solaire-collective-de-la-copropriete-les-hauts-de-puymaure-a-gap)
+      ~ de N=X                          "Ces normes reposent sur des études relatives à la taille des cratères consécutifs aux ruptures de canalisation et tiennent compte du diamètre et des pressions de service des installations de la TCPL." (https://bst-tsb.gc.ca/fra/rapports-reports/pipeline/1995/p95h0036/p95h0036.html)
+      ~ Adj=Y                           "Vous hésitez à mettre en vente votre appartement de 5 pièces avec installation électrique et salle de bain aux normes ?" (https://www.drimki.fr/prix-immobilier/dieppe-76200)
+      ~ de N=Y                          "Entretien des installations d'extincteurs automatiques à eau." (http://www.presses-polytechnique.ca/fr/installations-fixes-d-extinction)
+      ~ Adj=Y sur N=Z                   "Une installation solaire sur châssis en toiture terrasse laisse une large de manœuvre pour orienter et incliner au mieux les panneaux solaires pour une productivité maximale" (http://www.energie-climat.hautes-alpes.fr/index.php/toutes-les-realisations/135-installation-solaire-collective-de-la-copropriete-les-hauts-de-puymaure-a-gap)
+    FL
+      QSyn = @équipement                "Il s'agit là d'un optimum, en raison du manque de souplesse d'utilisation des centrales nucléaires et la nécessité de maintenir en fonctionnement des équipements classiques, plus souples d'utilisation, pour faire face aux périodes de pointe." (http://gazettenucleaire.org/1982/4647p03.html)
+      QS1 = @exploitant                 "Un exploitant d' installation éolienne qui n'est plus prévue par la planification cantonale en raison d'une modification de planification peut transférer une garantie de principe ou une décision positive selon l'ancien droit à une autre installation éolienne si les conditions suivantes sont réunies:" (https://www.admin.ch/opc/fr/classified-compilation/20162947/)
+      Ver = fonctionnel                 "Du premier contact au Salon du port à Neuchâtel, et de l'offre à la réalisation, une succession de personnes compétentes nous ont permis de disposer d'une installation fonctionnelle et parfaitement intégrée à notre toiture." (https://solstis.ch/fr)
+      AntiVer = défecteux               "Une fois la panne détectée, notre électricien procédera aux réparations des installations défectueuses ou, si besoin est, au remplacement du matériel." (https://www.mesdepanneurs.fr/cas/reparation-dune-panne-declairage-dans-tout-lappartement)
+    - Magn = géant                      "Des projets de grande ampleur commencent à voir le jour : des installations géantes de production solaire ou de production offshore hydrocinétique ou éolienne (plusieurs gigawatts ou dizaines de gigawatts) sont présentées en même temps que des concepts nouveaux de réseaux de transport qui les rendront réalisables." (http://www.smartgrids-cre.fr/index.php?p=supergrids-definition)
+      AntiMagn--temp = temporaire       "Le président français, aux côtés de la maire de la capitale Anne Hidalgo, a donc visité les installations temporaires du bord de la Seine." (https://www.lexpress.fr/actualite/politique/paris-2024-macron-s-essaye-au-tennis-en-fauteuil-roulant-pour-soutenir-les-jo_1921255.html)
+    + Magn--temp = permanente           
+      Oper1 = réaliser [Dét ~]          "Elle réalise des installations électriques en rénovation et en neuf." (https://www.m-habitat.fr/annuaire/haute-vienne/deschamps-electricite-a-panazol-electricien-24447_I)
+      Real1 = exploiter [Dét ~]         "Une fois le MOG construit, Elia possèdera et exploitera les installations offshore." (https://trends.levif.be/economie/entreprises/elia-debourse-400-millions-pour-une-prise-en-mer-du-nord/article-normal-646333.html)
+      Fact0 = fonctionner#1             "Cette installation fonctionne encore parfaitement." (http://bricolage.bricovideo.com/videos/bricolage_videos/video/haut_debit/bricolage_videos_plomberie.html)
+  6.
+    EX
+      "Depuis 1984, elle réalise des sculptures et des installations , souvent à grande échelle, utilisant de multiples techniques de verre ainsi que des matériaux mixtes." (https://espaceverre.qc.ca/?p=3759)
+      "Les installations des Mucucci XX investissent les lieux d'exposition dans un esprit d'art total : volumes, dessins, vidéos, diapositives, écritures, sons, publications (...), le tout cloîtré (palissade, papier peint, rideau...) afin de cerner la scène et rendre compte de la solitude, ce « cycle des satisfactions immédiates pour ceux qui n'en demandent pas beaucoup » (A-E et V Micucci)." (http://groupelaura.free.fr/Artistes.php?typeAffich=2&im=2&it=33&is=&ima=1)
+      "Ainsi, dans les années 1980, on vit fleurir, dans les banlieues du Brozoufland, d'étonnantes installations aux formes oniriques, s'intégrant tant bien que mal dans leur environnement moderniste." (https://visionscarto.net/geographie-du-brozoufland)
+      "Par ailleurs il a réalisé avec Marc Babarit une trentaine d' installations paysagères, en Europe et en Amérique du Nord principalement." (http://jocaseria.fr/Catalogue/Livres/Fiche%20livre/circumlacustre.html)
+      "Sa contribution à l'expositipon : Dans le hall d'entrée du pavillon, des animations en 3D flottent dans le vide. \"Tour à tour, on voit une rose, des lucioles, le bâtiment ou le logo de Rhône-Alpes s'animer\", indique Jean-Luc Payno, qui revient juste de Shanghai. \"Au vu du nombre de photos prises, je crois que l' installation a plu !\"" (http://www.3devent.fr/references/presse_3D_event.php)
+      "Puis une très belle installation centrale façon \"fontaine orientale\" nous apporte une petite note d'exotisme et de fraîcheur au long du parcours, malgré un éclairage peu avantageux." (http://www.lesbottinesrouges.fr/2016/04/critique-exposition-jardins-d-orient-a-l-institut-du-monde-arabe.html)
+      "Artiste et physicien, Peter Vogel crée depuis 1969 des installations et des objets qui réagissent à leur environnement." (http://www.artmag.com/galeries/c_frs/vincy/vogel.html)
+    DEF
+      ~ de Y de X dans Z pour A = objets qui composent l'œuvre Y qui résulte de l'~#4 de Y par l'artiste X dans le lieu Z pour que des personnes A la voit
+    SEM
+      installation#6(X, Y, Z, A) = c:composer(o, Y) & o:objet & r:résulter(Y, i) & i:installation#4(X, Y, Z) & b:but(X, i, v) & v:voir(A, Y)
+    FL
+      QSyn = @création                  "L'atelier Installation in-situ propose de réaliser une création artistique qui s'inspire du lieu où se déroule l'atelier." (http://centreturbine.org/en/service/workshops)
+      QSyn = @arrangement               "Enfin, la scène est éclairée par une lumière venant de côté, disposition imposée par les nécessités de l'emplacement, mais qui, grâce à un arrangement tout à fait artistique , produit le meilleur effet." (https://museumderouen.fr/fr/collections/historique-des-collections)
+      S1 = @artiste                     "L'artiste Renaud Auguste-Dormeuil réunit les trois dimensions du temps : le passé, en poursuivant la tradition de cartographie du ciel ; le présent, par cette installation éphémère ; et le futur, le ciel de Langres dans « cent » ans, place du « Centenaire »." (http://insituparis.fr/fr/actualites/details/325/nuit_blanche_i_will_keep_a_light_burning)
+        ! QS1
+      S2 = @œuvre                       "En 2005, après avoir sollicité le CAPC musée, Christian Boltanski installe définitivement l'œuvre dans un espace dérobé du musée sous le titre Pour Mémoire." (http://www.capc-bordeaux.fr/programme/journees-europeennes-du-patrimoine-2016)
+        ! QSyn
+      Magn = monumental                 "Aux abords du Grand Palais, le secteur On Site présente une quarantaine de sculptures et d' installations monumentales dans le cadre prestigieux du Petit Palais et des jardins alentours, ainsi que sur l'avenue Winston-Churchill, qui sépare les deux édifices." (http://marketingnews.fr/tribune/12983/avis-d’expert-catawiki-décrypte-les-tendances-de-la-fiac-2017)
+      Bon = beau                        "Puis une très belle installation centrale façon \"fontaine orientale\" nous apporte une petite note d'exotisme et de fraîcheur au long du parcours, malgré un éclairage peu avantageux." (http://www.lesbottinesrouges.fr/2016/04/critique-exposition-jardins-d-orient-a-l-institut-du-monde-arabe.html)
+    + AntiBon = laid                    
+      Redun = artistique                "Dans le hall d'entrée, une installation artistique lumineuse, signée par l'artiste Guillaume Bottazzi, confirme le statut haut de gamme de la résidence." (https://www.spirit-immobilier.fr/auvergne-rhone-alpes/69/lyon/7eme-squ-art)
+      AntiMagn--temp = éphémère         "Si ses œuvres les plus connues sont ses œuvres d'art public, Granche a aussi réalisé plusieurs installations éphémères pour des expositions." (http://www.artpourtous.umontreal.ca/voir/artistes/pierre-granche/index.html)
+      AntiMagn--temp = temporaire       "Un artiste dont les installations temporaires permettent aux passants de devenir un spectateur involontaire et qui pose les questions sur notre relation difficile et désespérée que l'on a avec la nature et l'environnement dans nos villes." (http://netkulture.free.fr/archives/05-01-2012_05-31-2012.html)
+    + Magn--temp = permanente           
+      Oper1 = réaliser [Dét ~]          "Depuis 1984, elle réalise des sculptures et des installations , souvent à grande échelle, utilisant de multiples techniques de verre ainsi que des matériaux mixtes." (https://espaceverre.qc.ca/?p=3759)
+        !! En conflit avec la définition
+      Real4 = visiter [Dét ~]           "Les clients de CTT qui visitent les installations artistiques de Scarborough pourront entrer gratuitement à la gare de Scarborough Centre, indique le site web de l'agence de transport en commun." (https://ici.radio-canada.ca/nouvelle/1333438/voici-a-quoi-sattendre-pour-la-nuit-blanche-a-toronto)
+      CausFact0 = exposer [Dét ~]       "Du côté de l'École d'Arts, nous remercions Frédéric Duprat, directeur adjoint, d'avoir monté un programme artistique à partir d'œuvres des élèves de son établissement et d'ouvrir une salle pour exposer les installations proposées." (https://ari.hypotheses.org/57)
+  8.
+    EX
+      "Vous devriez alors voir les lignes suivantes à la fin de l' installation :" (http://wiki.csnu.org/index.php?title=Installation_et_mise_en_place_d%27un_d%C3%A9p%C3%B4t_subversion&diff=prev&oldid=311)
+      "@cfreund : Lorqu'on demarre l'installation de windows et qu'on clique sur le X, l'installateur demande : \"Voulez-vous annuler l' installation de windows\" et non pas : \"D\"accord, l'instatation en en cours !\"." (https://www.zdnet.fr/actualites/forcing-windows-10-de-microsoft-la-grogne-des-utilisateurs-chinois-39837480.htm)
+      "Dans ce cas, OpenOffice refusera l' installation de l'OXT si le sysètme n'est pas autorisé." (https://wiki.openoffice.org/w/index.php?title=FR/Documentation/How_Tos/Installation/CreerExtension&oldid=245629)
+      "Sur un SE3 en version 2.0, il est possible de lancer une installation de windows XP à distance sur un ou plusieurs postes en installant au préalable le module \" installation de stations\"." (http://wwdeb.crdp.ac-caen.fr/mediase3/index.php/Le_module_Clonage_des_stations)
+      "SR64.exe, SearchReplace.exe et SR32.EXE sont les noms les plus courants pour les fichiers d' installation du programme." (https://fr.freedownloadmanager.org/Windows-PC/Search-and-Replace.html)
+    DEF
+      ~ de Y par X sur Z = fait pour la personne ou le logiciel X d'installer#5 le logiciel Y sur le matériel informatique Z
+    SEM
+      installation#8(X, Y, Z) = installer#5(X, Y, Z)
+    TR
+      ~                                 "Cliquez sur Finish pour terminer l installation." (http://docplayer.fr/526387-Installation-de-gfi-mailsecurity-en-mode-passerelle.html)
+      ~ Adj=Y                           "Setup Builder est un puissant système d' installation logicielle destiné aux développeurs et aux entreprises déployant des applications sur la plate-forme Microsoft Windows, notamment Windows 10, Windows 8, Windows 7, Windows Server et Vista." (https://www.download3k.fr/Developpement-Logiciels/Installation)
+      ~ de N=Y                          "Il ne vous reste plus qu'à lancer l' installation proprement dite de Photon :" (https://pioupioum.fr/developpement/photon-php-installer-mac-os-x-snow-leopard.html)
+      ~ sur N=Z                         "Installation sur votre ordinateur personnel == Sur cette page, vous trouverez les étapes pour l' installation du logiciel d'analyse statistique [[SAS|'''SAS''']]." (https://dms.umontreal.ca/wiki/index.php?title=Installation_de_SAS&action=edit&oldid=6454)
+      ~ de N=Y par N=X                  "Titre du sujet : Re: Probleme í l' installation de XOOPS 2.4.4 par Franck0768 sur 19/03/2010 20:46:41" (https://www.frxoops.org/modules/newbb/report.php?forum=63&topic_id=32270&viewmode=flat&order=ASC&post_id=195990)
+      ~ par N=X                         "Installation par un package prêt à l emploi Installation séparée des différents produits Utiliser un serveur web alternatif - le cas Microsoft IIS Installation sous Windows Utiliser un package d installation Installation avec XAMPP Installation avec Wamp Server Installer les produits séparément Installation de MySQL Installation d'apache HTTP Server 93 3/13" (http://docplayer.fr/2039967-Joomla-creation-et-administration-d-un-site-web-version-numerique.html)
+      ~ de N=Y sur N=Z                  "Après vous avoir proposé un tutoriel pour réussir l' installation d'Android OS sur l'iPhone Edge, puis dans un second temps sur l'iPhone 3G,..." (https://iphoneaddict.fr/tag/ssh)
+      ~ par N=X de N=Y sur N=Z          "Parmi les amendements soutenus par l'April, certains visaient à lutter contre les pratiques consistant à restreindre, voire interdire, l' installation de logiciels par un utilisateur sur son équipement informatique." (https://www.april.org/obsolescence-logicielle-quelques-avancees-en-commission-developpement-durable-sur-le-droit-a-l-infor)
+    FL
+      QSyn = @téléchargement            "Attention à l'emploi d'animation de type Flash (de Macromédia) qui exige le téléchargement du dernier plug-in; certains internautes (un peu anxieux ou pris d'un doute?) refusent systématiquement de les télécharger!" (https://www.easy-micro.org/ergonomie-web.php&id=177)
+      Anti = @désinstallation#2         "Cette opération est effectuée automatiquement lors de la désinstallation du logiciel via le menu «Programmes et fonctionnalités» du panneau de configuration de Windows." (http://docplayer.fr/12018053-Sommaire-installation-gestion-des-licences-schemaplic-1-telechargement-des-programmes-d-installation.html)
+      QAnti = @suppression              "Les premières suppressions de logiciels utilisant le nom « Windows » dans leur dénomination ont débuté." (https://www.ginjfo.com/actualites/logiciels/windows/page/20)
+      V0 = @installer#5                 "Bonjour à tous et toutes, Je viens d' installer Ubuntu 19.10 . l'installation dont il est question s'est bien passée, mais je n'ai ps accès à mes autre disques, ils sont tous marqués \"Root\", mais je suppose que c'est l'ancien root dont il est question car \"vous n'êtes pas propriétaire, donc vous ne pouvez pas changer les permissions\". comment faire pour m'en servir, car j'ai tout sur ces disques ?" (https://forum.ubuntu-fr.org/viewtopic.php?pid=22183086)
+      S2 = @logiciel_N                  "Pour une installation à distance du logiciel, créez une tâche d'installation à distance" (https://docplayer.fr/6055788-Manuel-de-deploiement.html)
+        ! QS2
+      S3 = @ordinateur                  "Installation sur votre ordinateur personnel == Sur cette page, vous trouverez les étapes pour l' installation du logiciel d'analyse statistique [[SAS|'''SAS''']]." (https://dms.umontreal.ca/wiki/index.php?title=Installation_de_SAS&action=edit&oldid=6454)
+        ! QS3
+      Smed = @installateur#2            "Cet installateur contient un script d'installation automatique." (http://adrien.caillot.free.fr/?p=5136)
+      Smed = @installeur                "D'abord l'installation : depuis un lecteur dvd sata, l' installeur n'a jamais reussi à lire les package." (https://forum.hardware.fr/hfr/OSAlternatifs/Installation/opensuse-leap-15-sujet_63256_3.htm)
+      Able2 = @installable#2            "Tuleap est libre (licence GPL), installable sur un serveur ou disponible en tant que service dans le cloud, pour ceux qui ne veulent pas s'occuper de l'installation ou de la maintenance." (https://linuxfr.org/?page=3)
+    - Qual2 = @téléchargeable           "L'application est téléchargeable gratuitement." (https://www.whoswho.fr/page/faq_faq)
+      Redun = logiciel_Adj              "Remarque importante Pour vous assurer une installation logicielle sans problèmes, a première installation doit être effectuée sur un ordinateur exécutant Windows." (https://docplayer.fr/1653454-Guide-d-utilisation-de-hp-mediasmart-server.html)
+    + Redun = informatique              
+    + QResult2 = @fonctionner           
+      Oper1 = effectuer [Dét ~]         "Personnellement j'ai supprimé le paquet \"bcmwl-kernel-source\" comme indiqué et dans système pilote supplémentaire j'ai effectué l' installation et tout est ok." (http://forum.edubuntu-fr.org/viewtopic.php?id=377104&p=3)
+      Oper1 = faire [Dét ~]             "@empey, La meilleure action aurait été de faire une installation de l'OS en 16.04 Lts ?" (https://forum.edubuntu-fr.org/viewtopic.php?pid=21868761)
+      Oper1 = procéder [à Dét ~]        "Il va donc vous falloir procéder à l'installation de logiciels PC pour profiter pleinement de tout ce que peut vous proposer votre matériel." (https://st-nazaire.cybertek.fr/installation/logiciel-pc-de-bureau.html)
+      IncepOper1 = lancer [Dét ~]       "Il ne vous reste plus qu'à lancer l' installation proprement dite de Photon :" (https://pioupioum.fr/developpement/photon-php-installer-mac-os-x-snow-leopard.html)
+      IncepOper1 = démarrer [Dét ~]     "Je démarre donc l' installation puis, elle s'arrête avec un message d'erreur qui dit : \"le paquet grub-efi-amd64-signed n'a pas pu être installé dans /target/." (http://forum.ubuntu-fr.org/viewtopic.php?id=1373481)
+      FinOper1 = terminer [Dét ~]       "Cliquez sur Finish pour terminer l installation." (http://docplayer.fr/526387-Installation-de-gfi-mailsecurity-en-mode-passerelle.html)
+      AntiFinOper1 = annuler [Dét ~]    "@cfreund : Lorqu'on demarre l'installation de windows et qu'on clique sur le X, l'installateur demande : \"Voulez-vous annuler l' installation de windows\" et non pas : \"D\"accord, l'instatation en en cours !\"." (https://www.zdnet.fr/actualites/forcing-windows-10-de-microsoft-la-grogne-des-utilisateurs-chinois-39837480.htm)
+        ! FinOper1, pour rendre compte du contraste avec "terminer", on pourrait ajouter AntiFact0 + ...
+      Able2+Func3 = fonctionner#2 [sur N=Z]"Si une installation fonctionne sur Windows 11, avec quelles versions de Domoticz, de Python, des drivers, etc." (https://easydomoticz.com/forum/viewtopic.php?p=115400)
+      Stop = échouer                    "installation de esound-0.2.36-5mdv2007.0.i586.rpm libesound0-0.2.36-5mdv2007.0.i586.rpm depuis /var/cache/urpmi/rpms L' installation a échoué :" (http://wiki.eagle-usb.tuxfamily.org/wakka.php?wiki=Install2006Mdv2007&show_comments=0)
+    + Ver = réussie                     
