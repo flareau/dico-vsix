@@ -33,6 +33,13 @@ export interface AnnotationNode {
   range: Range;
 }
 
+export interface InspectedAnnotation {
+  marker: "*" | "!";
+  penalty: number;
+  target: "item" | "example";
+  text: string;
+}
+
 export interface FlCallNode {
   name: string;
   value: string;
@@ -62,29 +69,57 @@ export interface InspectedEntry {
   grammaticalFeatures: string[];
   senses: Array<{
     number: string;
-    definitionShort: string;
-    definition: string;
-    sem: string[];
+    rem: string[];
+    definition: {
+      status: "valid" | "missing" | "invalid";
+      raw: string;
+      definiendum: string;
+      definiens: string;
+      annotations: InspectedAnnotation[];
+    } | null;
+    sem: {
+      status: "valid" | "missing" | "invalid";
+      raw: string;
+      definiendum: string;
+      definiens: string;
+      conditions: string | null;
+      annotations: InspectedAnnotation[];
+    } | null;
     examples: Array<{
+      status: "valid" | "missing" | "invalid";
       text: string;
       url: string | null;
+      web: boolean;
+      annotations: InspectedAnnotation[];
     }>;
     regimes: Array<{
+      status: "valid" | "missing" | "invalid";
       pattern: string;
       examples: Array<{
+        status: "valid" | "missing" | "invalid";
         text: string;
         url: string | null;
+        web: boolean;
+        annotations: InspectedAnnotation[];
       }>;
+      annotations: InspectedAnnotation[];
     }>;
     lexicalFunctions: Array<{
+      status: "valid" | "missing" | "invalid";
       name: string;
       value: string;
-      regime: string | null;
+      regimePre: string | null;
+      regimePost: string | null;
       examples: Array<{
+        status: "valid" | "missing" | "invalid";
         text: string;
         url: string | null;
+        web: boolean;
+        annotations: InspectedAnnotation[];
       }>;
+      annotations: InspectedAnnotation[];
     }>;
+    definitionShort: string;
   }>;
   sections: Record<string, string[]>;
   fls: Array<{
@@ -92,7 +127,7 @@ export interface InspectedEntry {
     value: string;
     sectionIndex: number;
   }>;
-  annotations: AnnotationNode[];
+  annotations: InspectedAnnotation[];
   errors: number;
   warnings: number;
 }

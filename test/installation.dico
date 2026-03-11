@@ -1,6 +1,6 @@
 installation /E~stalasjO~/
 nom, féminin
-  2.
+  2. % commentaire
     EX
       "Dans leur ouvrage sur les politiques de vie étudiante des universités, F. Kunian et G. Houzel (2009) signalent l'existence de guichets uniques offrant un ensemble de services pour faciliter les démarches nécessaires à l' installation des étudiants." (http://veille-et-analyses.ens-lyon.fr/LettreVST/59-decembre-2010.php?onglet=pdf)
       "Nous allons voir que les questions de leur sélection et de leurs conditions d' installation ou de retour constituent les principales pierres d'achoppement dans l'édification d'une politique communautaire d'immigration." (http://barthes.enssib.fr/TERRA/article535.html)
@@ -8,7 +8,7 @@ nom, féminin
       ~ de Y par X dans Z = fait pour la personne X d'installer#2 l'individu Y dans le lieu Z
     SEM
       installation#2(X, Y, Z) = installer#2(X, Y, Z)
-    TR
+    TR % commentaire
       ~                                 "D'après le crédit Mutuel, \"Jeunes Agriculteurs +\" combine offre de crédits et services spécifiques facilitant l' installation ." (http://www.agriavis.com/famille-318-aides+et+prets+a+l+installation-5.html)
       ~ Adj=Y                           "Toutes ces découvertes tendent à déplacer vers le nord le centre de gravité de l' installation gallo-romaine du Haut-Empire et complètent la trame de l'occupation antique." (https://journals.openedition.org/adlfi/6875)
       ~ de N=Y                          "Elle est devenue un pôle d'excellence en matière de textiles innovants et d'images et poursuit le développement de ses activités en favorisant l' installation d'entreprises." (https://vianova-groupe.fr/programmes-neufs/logements-neufs-hauts-de-france/nord/tourcoing-59200/beau-sejour)
@@ -24,6 +24,8 @@ nom, féminin
       AntiMagn--temp = provisoire       "Le site est choisi parmi quatre types d' installations provisoires (centres d'accueil ou de transit, camps spontanés, installations temporaires planifiées et extensions d'installations temporaires)." (http://helid.digicollection.org/fr/d/Js2680f/3.4.6.html)
       Func0 = avoir_lieu                "L' installation a lieu le mercredi 17 juin 1896." (http://evariste.lefeuvre.free.fr/associat/NDT/ConseilFabrique.htm)
       Oper1 = procéder [à Dét ~]        "Après la signature du contrat d'hébergement par l'usager, le travailleur social du CHRS Urgence procède à son installation sur le lieu d'hébergement." (http://www.association-alc.net/frontblocks/navigation/contents.asp?ID_THESAURUS=62&ID_THESAURUS_NODES=1579&ID_THESAURUS_OBJECTS=34)
+      {non standard} = bizarre "Exemple" (inventé)
+      !. trouver un exemple en corpus
   3.
     EX
       "Elle est devenue un pôle d'excellence en matière de textiles innovants et d'images et poursuit le développement de ses activités en favorisant l' installation d'entreprises." (https://vianova-groupe.fr/programmes-neufs/logements-neufs-hauts-de-france/nord/tourcoing-59200/beau-sejour)
@@ -83,6 +85,7 @@ nom, féminin
         ! Ver
     + AntiVer = mauvaise                
       Oper1 = faire [Dét ~]             "Bonjour On a déjà fait l installation du visiophone mais nous pensons qu il y a un problème de réglage." (https://youpijob.fr/annonces/bricolage/electricite/domotique/bondy)
+      * OK
       Oper1 = effectuer [Dét ~]         "Celui-ci effectue l' installation de cuisine, du lavabo, du WC, etc. au moyen de sanitaires." (http://plombier-fauville-en-caux.evaloria.fr/)
       Oper1 = réaliser [Dét ~]          "Installée à Plouguerneau et certifiée RGE, notre entreprise BESCOND COUVERTURE réalise l' installation et la rénovation de toiture en ardoise, dans le respect de la règlementation et des normes en vigueur." (https://www.bescond-couverture.fr/nos-prestations/pose-de-gouttiere-fenetres-de-toit-plouguerneau.html)
       Oper1 = procéder [à Dét ~]        "Fuite et perte de débit : Après avoir procédé à l' installation de cet adoucisseur d'eau pas cher, certains acheteurs ont constaté une diminution du flux de circulation d'eau." (https://lesentimentparfait.fr/bricolage/le-meilleur-adoucisseur-deau)

@@ -26,11 +26,20 @@ p {
 
 ul {
   margin: 0;
-  padding-left: 20px;
+  padding-left: 0;
+  list-style: none;
 }
 
 li {
   margin: 2px 0;
+  position: relative;
+  padding-left: 1.1em;
+}
+
+li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
 }
 
 .lemma {
@@ -132,4 +141,110 @@ h4 {
   text-decoration: none;
   color: var(--vscode-textLink-foreground);
   font-weight: 600;
+}
+
+.src-missing {
+  color: var(--vscode-errorForeground);
+  font-weight: 700;
+}
+
+.var-token {
+  font-weight: 600;
+  color: var(--vscode-textLink-foreground);
+}
+
+.self-token {
+  font-weight: 700;
+  color: #a855f7;
+}
+
+.lf-name {
+  font-family: var(--vscode-editor-font-family, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+  color: var(--vscode-editorWarning-foreground);
+}
+
+.lf-sub {
+  font-size: 0.72em;
+  vertical-align: sub;
+  line-height: 0;
+}
+
+.lf-sup {
+  font-size: 0.72em;
+  vertical-align: super;
+  line-height: 0;
+}
+
+.lf-regime {
+  color: var(--vscode-descriptionForeground);
+}
+
+.pos-token {
+  color: #2f6f9f;
+  font-weight: 600;
+}
+
+.at-token {
+  color: var(--vscode-disabledForeground);
+}
+
+.sense-index {
+  font-size: 0.72em;
+  vertical-align: sub;
+  line-height: 0;
+  color: #c792ea;
+}
+
+.annotations {
+  margin-top: 3px;
+}
+
+.annotation {
+  font-size: 0.82em;
+  color: var(--vscode-errorForeground) !important;
+}
+
+.annotation-error {
+  color: var(--vscode-errorForeground) !important;
+}
+
+li.status-missing {
+  color: var(--vscode-errorForeground) !important;
+}
+
+li.status-missing::before {
+  content: "+";
+}
+
+li.status-invalid {
+  color: var(--vscode-errorForeground) !important;
+  text-decoration: line-through;
+}
+
+li.status-invalid::before {
+  content: "–";
+}
+
+li.status-missing .var-token,
+li.status-invalid .var-token,
+.annotation-error .var-token,
+li.status-missing .self-token,
+li.status-invalid .self-token,
+.annotation-error .self-token,
+li.status-missing .pos-token,
+li.status-invalid .pos-token,
+.annotation-error .pos-token,
+li.status-missing .lf-name,
+li.status-invalid .lf-name,
+.annotation-error .lf-name,
+li.status-missing .lf-regime,
+li.status-invalid .lf-regime,
+.annotation-error .lf-regime,
+li.status-missing .at-token,
+li.status-invalid .at-token,
+.annotation-error .at-token,
+li.status-missing .sense-index,
+li.status-invalid .sense-index,
+.annotation-error .sense-index {
+  color: inherit !important;
 }
