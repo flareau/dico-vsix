@@ -1,18 +1,18 @@
 import { HeaderNode } from "../types";
+import { stripInlineComment } from "./commentSyntax";
 import { makeRange } from "./parseDocument";
 
-const HEADWORD_RE = /^\s*([\w\-\s']+?)\s+\/([A-Za-z0-9:@~]+)\/\s*$/u;
+const HEADWORD_RE = /^\s*([\p{L}\p{N}_\-'\s]+?)\s+\/\s*([A-Za-z0-9:@~.()_\\\s']+)\s*\/\s*$/u;
 
 export function parseHeader(lines: string[]): HeaderNode | null {
   for (let i = 0; i < lines.length; i += 1) {
-    const trimmed = lines[i].trim();
+    const trimmed = stripInlineComment(lines[i]).trim();
     if (!trimmed) continue;
-    if (/^[%\-+*!]/u.test(trimmed)) continue;
 
-    const match = lines[i].match(HEADWORD_RE);
+    const match = trimmed.match(HEADWORD_RE);
     if (!match) {
       return {
-        raw: lines[i],
+        raw: trimmed,
         lemma: null,
         code: null,
         range: makeRange(i, 0, lines[i].length)
@@ -20,9 +20,9 @@ export function parseHeader(lines: string[]): HeaderNode | null {
     }
 
     return {
-      raw: lines[i],
+      raw: trimmed,
       lemma: match[1].trim(),
-      code: match[2],
+      code: match[2].replace(/\s+/gu, ""),
       range: makeRange(i, 0, lines[i].length)
     };
   }

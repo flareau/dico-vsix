@@ -27,7 +27,7 @@ export interface HeaderNode {
 }
 
 export interface AnnotationNode {
-  marker: "%" | "-" | "+" | "*" | "!";
+  marker: "*" | "!";
   text: string;
   range: Range;
 }

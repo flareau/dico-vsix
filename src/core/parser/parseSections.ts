@@ -1,9 +1,12 @@
 import { SectionKind, SectionNode } from "../types";
+import { stripInlineComment } from "./commentSyntax";
 import { makeRange } from "./parseDocument";
 import { parseFunctionsInLines } from "./parseFunctions";
 
 const SECTION_RE = /^\s*(DEF|SEM|TR|FL|EX|REM)\b/u;
-const NUMBER_RE = /^\s*\d+\./u;
+const NUMBER_RE = /^\s*(\d+)\.\s*$/u;
+const NUMBER_WITH_SECTION_RE = /^\s*(\d+)\.\s*(DEF|SEM|TR|FL|EX|REM)\s*$/u;
+const RUN_IN_SECTION_RE = /^\s*(DEF|SEM|TR|FL|EX|REM)\s+(.+)$/u;
 
 function toSectionKind(value: string): SectionKind {
   switch (value) {
@@ -41,10 +44,40 @@ export function parseSections(lines: string[]): SectionNode[] {
 
   for (let i = 0; i < lines.length; i += 1) {
     const line = lines[i];
+    const canon = stripInlineComment(line).replace(/\s+/gu, " ").trim();
 
-    if (NUMBER_RE.test(line)) continue;
+    if (!canon) continue;
+    if (/^[*!]/u.test(canon)) continue;
 
-    const match = line.match(SECTION_RE);
+    if (NUMBER_RE.test(canon)) continue;
+
+    const numSection = canon.match(NUMBER_WITH_SECTION_RE);
+    if (numSection) {
+      if (current) pushCurrent(i - 1);
+      currentStart = i;
+      current = {
+        kind: toSectionKind(numSection[2]),
+        titleRaw: numSection[2],
+        lines: [],
+        range: makeRange(i, 0, line.length)
+      };
+      continue;
+    }
+
+    const runIn = canon.match(RUN_IN_SECTION_RE);
+    if (runIn) {
+      if (current) pushCurrent(i - 1);
+      currentStart = i;
+      current = {
+        kind: toSectionKind(runIn[1]),
+        titleRaw: runIn[1],
+        lines: [runIn[2]],
+        range: makeRange(i, 0, line.length)
+      };
+      continue;
+    }
+
+    const match = canon.match(SECTION_RE);
     if (match) {
       if (current) pushCurrent(i - 1);
       currentStart = i;
@@ -58,7 +91,8 @@ export function parseSections(lines: string[]): SectionNode[] {
     }
 
     if (current) {
-      current.lines.push(line);
+      const withoutComment = canon;
+      current.lines.push(withoutComment);
     }
   }
 

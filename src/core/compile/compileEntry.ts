@@ -18,7 +18,7 @@ export function compileEntry(ast: EntryAst, diagnostics: DiagnosticLike[]): Comp
         sectionIndex: index
       }))
     ),
-    annotations: ast.annotations,
+    annotations: [],
     errors: diagnostics.filter((item) => item.severity === "error").length,
     warnings: diagnostics.filter((item) => item.severity === "warning").length
   };

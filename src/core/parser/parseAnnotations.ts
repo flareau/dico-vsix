@@ -1,7 +1,7 @@
 import { AnnotationNode } from "../types";
 import { makeRange } from "./parseDocument";
 
-const ANNOTATION_RE = /^\s*([%\-+*!])\s?(.*)$/u;
+const ANNOTATION_RE = /^\s*([*!]+)(\.?)\s*(.+)$/u;
 
 export function parseAnnotations(lines: string[]): AnnotationNode[] {
   const results: AnnotationNode[] = [];
@@ -11,8 +11,8 @@ export function parseAnnotations(lines: string[]): AnnotationNode[] {
     if (!match) continue;
 
     results.push({
-      marker: match[1] as AnnotationNode["marker"],
-      text: match[2] ?? "",
+      marker: match[1].startsWith("!") ? "!" : "*",
+      text: match[3] ?? "",
       range: makeRange(i, 0, lines[i].length)
     });
   }
