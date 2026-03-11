@@ -4,44 +4,178 @@
   "scopeName": "text.dico",
   "patterns": [
     { "include": "#comments" },
+    { "include": "#keywords" },
     { "include": "#sections" },
-    { "include": "#functions" },
-    { "include": "#header" }
+    { "include": "#suffixes" },
+    { "include": "#headword" },
+    { "include": "#posgramm" },
+    { "include": "#examples" },
+    { "include": "#sources" },
+    { "include": "#actants" },
+    { "include": "#parameters" },
+    { "include": "#aliases" },
+    { "include": "#functions" }
   ],
   "repository": {
     "comments": {
       "patterns": [
         {
-          "name": "comment.line.percentage.dico",
+          "name": "comment.line.dico",
           "match": "(^|\\s)%.*$"
+        },
+        {
+          "name": "invalid.illegal.feedback.dico",
+          "match": "^\\s*[\\-|\\+|\\*|!].*$"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.dico",
+          "match": "(&|\\+)"
+        },
+        {
+          "name": "keyword.control.dico",
+          "match": "(?<=\\W)~(?=\\W)"
+        },
+        {
+          "name": "keyword.control.dico",
+          "match": "(?<!\\w)@(?=\\w)"
         }
       ]
     },
     "sections": {
       "patterns": [
         {
-          "name": "keyword.control.section.dico",
-          "match": "^\\s*(DEF|SEM|TR|FL|EX|REM)\\b"
+          "name": "markup.heading.1.lex.dico",
+          "match": "^\\s*\\d+\\."
         },
         {
-          "name": "constant.numeric.sense.dico",
-          "match": "^\\s*\\d+\\."
+          "name": "markup.heading.2.section.dico",
+          "match": "^\\s*(DEF|SEM|TR|FL|EX|REM)\\b"
+        }
+      ]
+    },
+    "suffixes": {
+      "patterns": [
+        {
+          "name": "storage.modifier.vocnum.dico",
+          "match": "(?<=\\w)_\\d+\\b"
+        },
+        {
+          "name": "storage.modifier.pos.dico",
+          "match": "(?<=\\w)_(N|V|Adj|Adv|Prep|Prép|Pro|Det|Dét)(?=_|\\b)"
+        },
+        {
+          "name": "storage.modifier.lexnum.dico",
+          "match": "(?<=\\w|~)#\\d+\\b"
+        },
+        {
+          "name": "support.function.component.dico",
+          "match": "(?<=\\w)\\^\\w+\\b"
+        }
+      ]
+    },
+    "headword": {
+      "patterns": [
+        {
+          "name": "string.regexp.headword.dico",
+          "match": "^\\s*[\\p{L}\\p{N}_][\\p{L}\\p{N}_\\-\\'\\s]*\\s+/\\s*[A-Za-z0-9:@~\\.\\(\\)_\\\\\\s']+\\s*/\\s*$"
+        }
+      ]
+    },
+    "posgramm": {
+      "patterns": [
+        {
+          "name": "entity.name.type.pos.dico",
+          "match": "\\b(N|V|Adj|Adv|Poss|Pro|Det|Dét)\\b"
+        },
+        {
+          "name": "entity.name.type.definiteness.dico",
+          "match": "(?<=\\bN|~)\\.(def|déf|indef|indéf|ø)\\b"
+        },
+        {
+          "name": "entity.name.type.number.dico",
+          "match": "(?<=\\b(N|~)(\\.def|\\.déf|\\.indef|\\.indéf|\\.ø)?)\\.(sg|pl)\\b"
+        },
+        {
+          "name": "entity.name.type.tense.dico",
+          "match": "(?<=\\bV|~)\\.(ind|subj|inf|pp|ppres|pprés)\\b"
+        },
+        {
+          "name": "entity.name.type.tense.dico",
+          "match": "(?<=\\bPro)\\.(nom|acc|dat)\\b"
+        }
+      ]
+    },
+    "actants": {
+      "patterns": [
+        {
+          "name": "markup.bold.actant.dico",
+          "match": "\\b(X|Y|Z|A|B|C)[1-9]?\\b(?!['\\-])"
+        }
+      ]
+    },
+    "parameters": {
+      "name": "markup.italic.source.dico",
+      "begin": "(?<=\\w)\\(",
+      "end": "\\)",
+      "patterns": [
+        { "include": "#actants" },
+        {
+          "name": "variable.parameter.argument.dico",
+          "match": "(?<=(\\s|\\(|,))\\w+(?=\\b)"
+        }
+      ]
+    },
+    "aliases": {
+      "patterns": [
+        {
+          "name": "variable.parameter.alias.dico",
+          "match": "\\b\\w+:(?=\\w)"
+        }
+      ]
+    },
+    "examples": {
+      "name": "string.quoted.double",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.dico",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "sources": {
+      "name": "markup.italic.source.dico",
+      "begin": "(?<=\"\\s*)\\(",
+      "end": "\\)",
+      "patterns": [
+        {
+          "name": "constant.character.escape.dico",
+          "match": "\\\\."
+        },
+        {
+          "name": "comment.block.source.invented.dico",
+          "match": "inventé"
+        },
+        {
+          "name": "comment.block.source.url.dico",
+          "match": "(?<=\\(\\s*)https?://[^\\s]+(?=\\s*\\))"
         }
       ]
     },
     "functions": {
       "patterns": [
         {
-          "name": "entity.name.function.lexical.dico",
-          "match": "\\b(Q?(A\\d|Able\\d|Adv\\d|Anti|Bon\\d?|Cap|Caus\\d|Claus|Cont|Contr|Conv\\d{2,}|Copul|Degrad|Epit|Equip|Excess|Fact\\d+|Figur|Fin|Func\\d+|Gener|Imper|Imperf|Incep|Instr|Involv\\d+|Labor\\d{2,}|Labreal\\d{2,}|Liqu\\d?|Locab|Locad|Locin|Magn\\d?|Manif|Minus|Mult\\d?|Non|Obstr|Oper\\d+|Perf|Perm\\d+?|Plus|Pred|Prepar|Propt\\d|Prox|Qual\\d|Real\\d+|Redun|Result\\d|S\\d|Sing|Sinstr|Sloc|Smed|Smod|Son|Sres|Stop|Sympt\\d{3}|Syn|V0|Ver))\\b"
-        }
-      ]
-    },
-    "header": {
-      "patterns": [
+          "name": "support.function.lf.dico",
+          "match": "\\b(Q?(A\\d|Able\\d|Adv\\d|Anti|Bon\\d?|Cap|Caus\\d|Claus|Cont|Contr|Conv\\d{2,}|Copul|Degrad|Epit|Equip|Excess|Fact\\d+|Figur|Fin|Func\\d+|Gener|Imper|Imperf|Incep|Instr|Involv\\d+|Labor\\d{2,}|Labreal\\d{2,}|Liqu\\d?|Locab|Locad|Locin|Magn\\d?|Manif|Minus|Mult\\d?|Non|Obstr|Oper\\d+|Perf|Perm\\d+?|Plus|Pred|Prepar|Propt\\d|Prox|Qual\\d|Real\\d+|Redun|Result\\d|S\\d|Sing|Sinstr|Sloc|Smed|Smod|Son|Sres|Stop|Sympt\\d{3}|Syn|V0|Ver))+\\b"
+        },
         {
-          "name": "meta.header.dico",
-          "match": "^\\s*.+?\\s+/[^/\\s]+/\\s*$"
+          "name": "support.function.nstdlf.dico",
+          "match": "\\{[^\\}]+\\}"
         }
       ]
     }
