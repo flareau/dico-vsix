@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 12px;
+  color: var(--vscode-foreground);
+  background: var(--vscode-editor-background);
+  font-family: var(--vscode-font-family);
+  font-size: var(--vscode-font-size);
+  line-height: 1.45;
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+h3 {
+  margin: 14px 0 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+p {
+  margin: 4px 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+li {
+  margin: 2px 0;
+}
+
+.lemma {
+  font-variant-caps: small-caps;
+}

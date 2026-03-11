@@ -23,20 +23,28 @@ export class InspectorViewProvider implements vscode.WebviewViewProvider {
   private render(): void {
     if (!this.view) return;
 
+    const stylesheetUri = this.view.webview.asWebviewUri(
+      vscode.Uri.joinPath(this.extensionUri, "media", "inspector.css"),
+    );
     const data = this.latest?.inspected;
     if (!data) {
-      this.view.webview.html = "<html><body><p>Aucune fiche analysée.</p></body></html>";
+      this.view.webview.html = `
+        <html>
+          <head>
+            <link rel="stylesheet" href="${stylesheetUri}">
+          </head>
+          <body>
+            <p>Aucune fiche analysée.</p>
+          </body>
+        </html>
+      `;
       return;
     }
 
     this.view.webview.html = `
       <html>
         <head>
-          <style>
-            .lemma {
-              font-variant-caps: small-caps;
-            }
-          </style>
+          <link rel="stylesheet" href="${stylesheetUri}">
         </head>
         <body>
           <h2><span class="lemma">${escapeHtml(data.lemma ?? "??")}</span> /${escapeHtml(data.ipa ?? "??")}/</h2>
