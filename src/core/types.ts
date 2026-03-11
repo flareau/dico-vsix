@@ -23,6 +23,7 @@ export interface HeaderNode {
   raw: string;
   lemma: string | null;
   xsampa: string | null;
+  ipa: string | null;
   range: Range;
 }
 
@@ -57,6 +58,7 @@ export interface EntryAst {
 export interface InspectedEntry {
   lemma: string | null;
   xsampa: string | null;
+  ipa: string | null;
   sections: Record<string, string[]>;
   fls: Array<{
     name: string;

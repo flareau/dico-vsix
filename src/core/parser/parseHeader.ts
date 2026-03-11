@@ -1,4 +1,5 @@
 import { HeaderNode } from "../types";
+import { xsampaToIpa } from "../xsampaToIpa";
 import { stripInlineComment } from "./commentSyntax";
 import { makeRange } from "./parseDocument";
 
@@ -15,14 +16,17 @@ export function parseHeader(lines: string[]): HeaderNode | null {
         raw: trimmed,
         lemma: null,
         xsampa: null,
+        ipa: null,
         range: makeRange(i, 0, lines[i].length)
       };
     }
 
+    const xsampa = match[2].replace(/\s+/gu, "");
     return {
       raw: trimmed,
       lemma: match[1].trim(),
-      xsampa: match[2].replace(/\s+/gu, ""),
+      xsampa,
+      ipa: xsampaToIpa(xsampa),
       range: makeRange(i, 0, lines[i].length)
     };
   }

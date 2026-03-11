@@ -10,6 +10,7 @@ export function inspectEntry(ast: EntryAst, diagnostics: DiagnosticLike[]): Insp
   return {
     lemma: ast.header?.lemma ?? null,
     xsampa: ast.header?.xsampa ?? null,
+    ipa: ast.header?.ipa ?? null,
     sections,
     fls: ast.sections.flatMap((section, index) =>
       (section.flCalls ?? []).map((fl) => ({
