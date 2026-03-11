@@ -1,4 +1,4 @@
-import { compileEntry } from "./compile/compileEntry";
+import { inspectEntry } from "./inspect/inspectEntry";
 import { parseDocument } from "./parser/parseDocument";
 import { AnalysisResult } from "./types";
 import { validateDocument } from "./validate/validateDocument";
@@ -10,6 +10,6 @@ export function analyzeDocument(text: string): AnalysisResult {
   return {
     ast,
     diagnostics,
-    compiled: compileEntry(ast, diagnostics)
+    inspected: inspectEntry(ast, diagnostics)
   };
 }

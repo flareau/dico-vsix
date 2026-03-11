@@ -1,6 +1,6 @@
-import { CompiledEntry, DiagnosticLike, EntryAst } from "../types";
+import { DiagnosticLike, EntryAst, InspectedEntry } from "../types";
 
-export function compileEntry(ast: EntryAst, diagnostics: DiagnosticLike[]): CompiledEntry {
+export function inspectEntry(ast: EntryAst, diagnostics: DiagnosticLike[]): InspectedEntry {
   const sections: Record<string, string[]> = {};
 
   for (const section of ast.sections) {

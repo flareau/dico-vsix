@@ -35,8 +35,8 @@
     ],
     "commands": [
       {
-        "command": "dico.compileCurrentFile",
-        "title": "DICO: Compile Current File"
+        "command": "dico.inspectCurrentFile",
+        "title": "DICO: Inspect Current File"
       },
       {
         "command": "dico.validateWorkspace",

@@ -23,7 +23,7 @@ export class InspectorViewProvider implements vscode.WebviewViewProvider {
   private render(): void {
     if (!this.view) return;
 
-    const data = this.latest?.compiled;
+    const data = this.latest?.inspected;
     if (!data) {
       this.view.webview.html = "<html><body><p>Aucune fiche analysée.</p></body></html>";
       return;

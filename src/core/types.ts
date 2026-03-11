@@ -54,7 +54,7 @@ export interface EntryAst {
   rawLines: string[];
 }
 
-export interface CompiledEntry {
+export interface InspectedEntry {
   lemma: string | null;
   code: string | null;
   sections: Record<string, string[]>;
@@ -71,5 +71,5 @@ export interface CompiledEntry {
 export interface AnalysisResult {
   ast: EntryAst;
   diagnostics: DiagnosticLike[];
-  compiled: CompiledEntry | null;
+  inspected: InspectedEntry | null;
 }

@@ -7,10 +7,10 @@ Extension VS Code pour fiches lexicographiques `.dico`.
 - coloration syntaxique (sections, actants, fonctions lexicales, exemples, sources, annotations)
 - configuration d’édition DICO (`%` en commentaire de ligne, paires auto-fermantes, etc.)
 - diagnostics de structure (en-tête, sections connues, sections dupliquées par lexie)
-- compilation interne pour inspection
+- inspection interne
 - panneau `Entry Inspector`
 - commandes:
-  - `DICO: Compile Current File`
+  - `DICO: Inspect Current File`
   - `DICO: Validate Workspace`
 
 ## Développement
