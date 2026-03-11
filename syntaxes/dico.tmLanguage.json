@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Dico",
+  "scopeName": "text.dico",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#sections" },
+    { "include": "#functions" },
+    { "include": "#header" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.percentage.dico",
+          "match": "%.*$"
+        }
+      ]
+    },
+    "sections": {
+      "patterns": [
+        {
+          "name": "keyword.control.section.dico",
+          "match": "^\\s*(DEF|SEM|TR|FL|EX|REM)\\b"
+        },
+        {
+          "name": "constant.numeric.sense.dico",
+          "match": "^\\s*\\d+\\."
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "entity.name.function.lexical.dico",
+          "match": "\\b(Q?(A\\d|Able\\d|Adv\\d|Anti|Bon\\d?|Cap|Caus\\d|Claus|Cont|Contr|Conv\\d{2,}|Copul|Degrad|Epit|Equip|Excess|Fact\\d+|Figur|Fin|Func\\d+|Gener|Imper|Imperf|Incep|Instr|Involv\\d+|Labor\\d{2,}|Labreal\\d{2,}|Liqu\\d?|Locab|Locad|Locin|Magn\\d?|Manif|Minus|Mult\\d?|Non|Obstr|Oper\\d+|Perf|Perm\\d+?|Plus|Pred|Prepar|Propt\\d|Prox|Qual\\d|Real\\d+|Redun|Result\\d|S\\d|Sing|Sinstr|Sloc|Smed|Smod|Son|Sres|Stop|Sympt\\d{3}|Syn|V0|Ver))\\b"
+        }
+      ]
+    },
+    "header": {
+      "patterns": [
+        {
+          "name": "meta.header.dico",
+          "match": "^\\s*[\\w\\-\\s']+\\s+/[A-Za-z0-9:@~]+/\\s*$"
+        }
+      ]
+    }
+  }
+}

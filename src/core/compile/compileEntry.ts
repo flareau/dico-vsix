@@ -1,0 +1,25 @@
+import { CompiledEntry, DiagnosticLike, EntryAst } from "../types";
+
+export function compileEntry(ast: EntryAst, diagnostics: DiagnosticLike[]): CompiledEntry {
+  const sections: Record<string, string[]> = {};
+
+  for (const section of ast.sections) {
+    sections[section.kind] = [...(sections[section.kind] ?? []), ...section.lines];
+  }
+
+  return {
+    lemma: ast.header?.lemma ?? null,
+    code: ast.header?.code ?? null,
+    sections,
+    fls: ast.sections.flatMap((section, index) =>
+      (section.flCalls ?? []).map((fl) => ({
+        name: fl.name,
+        args: fl.args,
+        sectionIndex: index
+      }))
+    ),
+    annotations: ast.annotations,
+    errors: diagnostics.filter((item) => item.severity === "error").length,
+    warnings: diagnostics.filter((item) => item.severity === "warning").length
+  };
+}
