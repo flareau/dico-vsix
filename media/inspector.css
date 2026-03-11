@@ -113,17 +113,19 @@ h4 {
 .hover-tip {
   display: none;
   position: absolute;
-  left: 0;
-  top: 100%;
+  left: 50%;
+  right: 0;
+  top: 0;
   z-index: 10;
-  min-width: 220px;
-  max-width: 420px;
-  margin-top: 4px;
+  min-width: 0;
+  max-width: none;
+  margin-top: 0;
   padding: 8px;
   border: 1px solid var(--vscode-panel-border);
   border-radius: 6px;
   background: var(--vscode-editorWidget-background);
   box-shadow: 0 4px 10px rgb(0 0 0 / 25%);
+  overflow-wrap: anywhere;
 }
 
 .hover-item:hover .hover-tip {
@@ -135,6 +137,10 @@ h4 {
   align-items: start;
   gap: 6px;
   margin: 4px 0;
+}
+
+.example-line {
+  font-size: 0.93em;
 }
 
 .src-link {
@@ -154,8 +160,8 @@ h4 {
 }
 
 .self-token {
-  font-weight: 700;
-  color: #a855f7;
+  font-weight: 900;
+  color: inherit;
 }
 
 .lf-name {
@@ -182,6 +188,13 @@ h4 {
 .pos-token {
   color: #2f6f9f;
   font-weight: 600;
+}
+
+.pos-sub {
+  color: #2f6f9f;
+  font-size: 0.72em;
+  vertical-align: sub;
+  line-height: 0;
 }
 
 .at-token {
@@ -234,6 +247,9 @@ li.status-invalid .self-token,
 li.status-missing .pos-token,
 li.status-invalid .pos-token,
 .annotation-error .pos-token,
+li.status-missing .pos-sub,
+li.status-invalid .pos-sub,
+.annotation-error .pos-sub,
 li.status-missing .lf-name,
 li.status-invalid .lf-name,
 .annotation-error .lf-name,

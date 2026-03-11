@@ -125,7 +125,7 @@ export class InspectorViewProvider implements vscode.WebviewViewProvider {
                         ${sense.examples
                           .map(
                             (example) => `
-                              <li class="status-${example.status}">
+                              <li class="example-line status-${example.status}">
                                 <span>${escapeHtml(example.text)}</span>
                                 ${renderSourceIndicator(example)}
                                 ${renderAnnotations(example.annotations)}
@@ -174,6 +174,9 @@ function renderDicoText(value: string): string {
   };
 
   const withTokens = escapeHtml(value)
+    .replace(/\b(Adj|Adv|N|V|Dét|Det|Prep|Pron)\s*=\s*([XYZABC]\d*)\b/gu, (_m, pos: string, variable: string) => {
+      return put(`<span class="var-token">${variable}</span><sub class="pos-sub">${pos}</sub>`);
+    })
     .replace(/#(\d+)/g, (_m, n: string) => put(`<sub class="sense-index">${n}</sub>`))
     .replace(/~/g, () => put('<span class="self-token">~</span>'))
     .replace(/\b([XYZABC])(\d*)\b/gu, (_m, letter: string, index: string) => {
@@ -217,7 +220,7 @@ function renderExampleTips(
       ${examples
         .map(
           (example) => `
-            <div class="tip-row status-${example.status}">
+            <div class="tip-row example-line status-${example.status}">
               <span>${escapeHtml(example.text)}</span>
               ${renderSourceIndicator(example)}
               ${renderAnnotations(example.annotations)}
