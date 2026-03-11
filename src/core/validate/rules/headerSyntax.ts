@@ -19,7 +19,7 @@ export function validateHeaderSyntax(ast: EntryAst): DiagnosticLike[] {
     }];
   }
 
-  if (!ast.header.lemma || !ast.header.code) {
+  if (!ast.header.lemma || !ast.header.xsampa) {
     return [{
       code: "header.invalid",
       message: "En-tête invalide. Format attendu : signifiant /X-SAMPA/.",

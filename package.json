@@ -48,7 +48,7 @@
         {
           "id": "dico",
           "title": "DICO",
-          "icon": "media/dico.svg"
+          "icon": "media/dico.png"
         }
       ]
     },
@@ -57,7 +57,8 @@
         {
           "id": "dico.inspector",
           "name": "Entry Inspector",
-          "icon": "media/dico.svg"
+          "type": "webview",
+          "icon": "media/dico.png"
         }
       ]
     }

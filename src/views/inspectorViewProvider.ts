@@ -33,7 +33,7 @@ export class InspectorViewProvider implements vscode.WebviewViewProvider {
       <html>
         <body>
           <h2>${escapeHtml(data.lemma ?? "(sans lemme)")}</h2>
-          <p><strong>Code :</strong> ${escapeHtml(data.code ?? "—")}</p>
+          <p><strong>X-SAMPA :</strong> ${escapeHtml(data.xsampa ?? "—")}</p>
           <p><strong>Erreurs :</strong> ${data.errors}</p>
           <p><strong>Avertissements :</strong> ${data.warnings}</p>
 
@@ -47,7 +47,7 @@ export class InspectorViewProvider implements vscode.WebviewViewProvider {
           <h3>Fonctions lexicales</h3>
           <ul>
             ${data.fls
-              .map((fl) => `<li>${escapeHtml(fl.name)}(${escapeHtml(fl.value)})</li>`)
+              .map((fl) => `<li>${escapeHtml(fl.name)} = ${escapeHtml(fl.value)}</li>`)
               .join("")}
           </ul>
 

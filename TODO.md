@@ -4,3 +4,4 @@
 - [ ] Add configuration files for core grammar constants (POS tags, variables, etc.).
 - [ ] Add multilingual support for user-facing strings (i18n).
 - [ ] Improve sense number / section handling in `parseSections` (run-in forms, transitions, edge cases).
+- [ ] Fix extension/view icon behavior in VS Code (activity bar + inspector tab icon).

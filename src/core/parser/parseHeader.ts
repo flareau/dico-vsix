@@ -14,7 +14,7 @@ export function parseHeader(lines: string[]): HeaderNode | null {
       return {
         raw: trimmed,
         lemma: null,
-        code: null,
+        xsampa: null,
         range: makeRange(i, 0, lines[i].length)
       };
     }
@@ -22,7 +22,7 @@ export function parseHeader(lines: string[]): HeaderNode | null {
     return {
       raw: trimmed,
       lemma: match[1].trim(),
-      code: match[2].replace(/\s+/gu, ""),
+      xsampa: match[2].replace(/\s+/gu, ""),
       range: makeRange(i, 0, lines[i].length)
     };
   }

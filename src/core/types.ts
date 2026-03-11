@@ -22,7 +22,7 @@ export type SectionKind = "DEF" | "SEM" | "TR" | "FL" | "EX" | "REM" | "UNKNOWN"
 export interface HeaderNode {
   raw: string;
   lemma: string | null;
-  code: string | null;
+  xsampa: string | null;
   range: Range;
 }
 
@@ -56,7 +56,7 @@ export interface EntryAst {
 
 export interface InspectedEntry {
   lemma: string | null;
-  code: string | null;
+  xsampa: string | null;
   sections: Record<string, string[]>;
   fls: Array<{
     name: string;
