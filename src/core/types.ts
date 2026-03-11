@@ -59,6 +59,33 @@ export interface InspectedEntry {
   lemma: string | null;
   xsampa: string | null;
   ipa: string | null;
+  grammaticalFeatures: string[];
+  senses: Array<{
+    number: string;
+    definitionShort: string;
+    definition: string;
+    sem: string[];
+    examples: Array<{
+      text: string;
+      url: string | null;
+    }>;
+    regimes: Array<{
+      pattern: string;
+      examples: Array<{
+        text: string;
+        url: string | null;
+      }>;
+    }>;
+    lexicalFunctions: Array<{
+      name: string;
+      value: string;
+      regime: string | null;
+      examples: Array<{
+        text: string;
+        url: string | null;
+      }>;
+    }>;
+  }>;
   sections: Record<string, string[]>;
   fls: Array<{
     name: string;

@@ -36,3 +36,100 @@ li {
 .lemma {
   font-variant-caps: small-caps;
 }
+
+.entry-header {
+  margin-bottom: 12px;
+}
+
+.diagnostics {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  color: var(--vscode-descriptionForeground);
+}
+
+.grammar,
+.senses {
+  margin-bottom: 14px;
+}
+
+.sense {
+  border: 1px solid var(--vscode-panel-border);
+  border-radius: 6px;
+  margin: 8px 0;
+  background: var(--vscode-sideBar-background);
+}
+
+.sense summary {
+  cursor: pointer;
+  padding: 8px 10px;
+  list-style: none;
+  display: flex;
+  gap: 8px;
+}
+
+.sense summary::-webkit-details-marker {
+  display: none;
+}
+
+.sense-number {
+  min-width: 2ch;
+  font-weight: 600;
+}
+
+.sense-short {
+  color: var(--vscode-descriptionForeground);
+}
+
+.sense-content {
+  padding: 0 10px 10px;
+}
+
+.sem-placeholder {
+  margin: 8px 0 12px;
+  padding: 8px;
+  border-radius: 4px;
+  background: var(--vscode-editor-inactiveSelectionBackground);
+}
+
+h4 {
+  margin: 10px 0 6px;
+  font-size: 0.85rem;
+}
+
+.hover-item {
+  position: relative;
+}
+
+.hover-tip {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 10;
+  min-width: 220px;
+  max-width: 420px;
+  margin-top: 4px;
+  padding: 8px;
+  border: 1px solid var(--vscode-panel-border);
+  border-radius: 6px;
+  background: var(--vscode-editorWidget-background);
+  box-shadow: 0 4px 10px rgb(0 0 0 / 25%);
+}
+
+.hover-item:hover .hover-tip {
+  display: block;
+}
+
+.tip-row {
+  display: flex;
+  align-items: start;
+  gap: 6px;
+  margin: 4px 0;
+}
+
+.src-link {
+  text-decoration: none;
+  color: var(--vscode-textLink-foreground);
+  font-weight: 600;
+}

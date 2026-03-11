@@ -47,30 +47,80 @@ export class InspectorViewProvider implements vscode.WebviewViewProvider {
           <link rel="stylesheet" href="${stylesheetUri}">
         </head>
         <body>
-          <h2><span class="lemma">${escapeHtml(data.lemma ?? "??")}</span> /${escapeHtml(data.ipa ?? "??")}/</h2>
-          <p><strong>Erreurs :</strong> ${data.errors}</p>
-          <p><strong>Avertissements :</strong> ${data.warnings}</p>
+          <header class="entry-header">
+            <h2><span class="lemma">${escapeHtml(data.lemma ?? "??")}</span> /${escapeHtml(data.ipa ?? "??")}/</h2>
+            <p class="diagnostics">
+              <span>Erreurs: ${data.errors}</span>
+              <span>Avertissements: ${data.warnings}</span>
+            </p>
+          </header>
 
-          <h3>Sections</h3>
-          <ul>
-            ${Object.entries(data.sections)
-              .map(([key, value]) => `<li><strong>${escapeHtml(key)}</strong> : ${value.length} ligne(s)</li>`)
-              .join("")}
-          </ul>
+          <section class="grammar">
+            <h3>Traits grammaticaux</h3>
+            <p>${data.grammaticalFeatures.length > 0 ? escapeHtml(data.grammaticalFeatures.join(" · ")) : "—"}</p>
+          </section>
 
-          <h3>Fonctions lexicales</h3>
-          <ul>
-            ${data.fls
-              .map((fl) => `<li>${escapeHtml(fl.name)} = ${escapeHtml(fl.value)}</li>`)
-              .join("")}
-          </ul>
+          <section class="senses">
+            <h3>Sens</h3>
+            ${data.senses
+              .map((sense) => {
+                const regimes = sense.regimes
+                  .map((regime) => {
+                    return `
+                      <li class="hover-item">
+                        <span>${escapeHtml(regime.pattern)}</span>
+                        ${renderExampleTips(regime.examples)}
+                      </li>
+                    `;
+                  })
+                  .join("");
 
-          <h3>Annotations</h3>
-          <ul>
-            ${data.annotations
-              .map((annotation) => `<li>${escapeHtml(annotation.marker)} ${escapeHtml(annotation.text)}</li>`)
-              .join("")}
-          </ul>
+                const lexicalFunctions = sense.lexicalFunctions
+                  .map((lf) => {
+                    const regimeSuffix = lf.regime ? ` [${escapeHtml(lf.regime)}]` : "";
+                    return `
+                      <li class="hover-item">
+                        <span>${escapeHtml(lf.name)} = ${escapeHtml(lf.value)}${regimeSuffix}</span>
+                        ${renderExampleTips(lf.examples)}
+                      </li>
+                    `;
+                  })
+                  .join("");
+
+                return `
+                  <details class="sense">
+                    <summary>
+                      <span class="sense-number">${escapeHtml(sense.number)}.</span>
+                      <span class="sense-short">${escapeHtml(sense.definitionShort)}</span>
+                    </summary>
+                    <div class="sense-content">
+                      <p><strong>Définition:</strong> ${escapeHtml(sense.definition)}</p>
+                      <div class="sem-placeholder">
+                        <strong>SEM:</strong> ${sense.sem.length > 0 ? escapeHtml(sense.sem.join(" ")) : "visualisation à venir"}
+                      </div>
+                      <h4>EX</h4>
+                      <ul>
+                        ${sense.examples
+                          .map(
+                            (example) => `
+                              <li>
+                                <span>${escapeHtml(example.text)}</span>
+                                ${example.url ? `<a class="src-link" href="${escapeAttr(example.url)}" title="Source" target="_blank" rel="noopener noreferrer">↗</a>` : ""}
+                              </li>
+                            `,
+                          )
+                          .join("") || "<li>—</li>"}
+                      </ul>
+                      <h4>TR</h4>
+                      <ul>${regimes || "<li>—</li>"}</ul>
+                      <h4>FL</h4>
+                      <ul>${lexicalFunctions || "<li>—</li>"}</ul>
+                    </div>
+                  </details>
+                `;
+              })
+              .join("") || "<p>Aucun sens numéroté détecté.</p>"}
+          </section>
         </body>
       </html>
     `;
@@ -82,4 +132,27 @@ function escapeHtml(value: string): string {
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
+}
+
+function escapeAttr(value: string): string {
+  return escapeHtml(value).replace(/"/g, "&quot;");
+}
+
+function renderExampleTips(examples: Array<{ text: string; url: string | null }>): string {
+  if (examples.length === 0) return "";
+
+  return `
+    <div class="hover-tip">
+      ${examples
+        .map(
+          (example) => `
+            <div class="tip-row">
+              <span>${escapeHtml(example.text)}</span>
+              ${example.url ? `<a class="src-link" href="${escapeAttr(example.url)}" title="Source" target="_blank" rel="noopener noreferrer">↗</a>` : ""}
+            </div>
+          `,
+        )
+        .join("")}
+    </div>
+  `;
 }
