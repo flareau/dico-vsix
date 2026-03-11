@@ -31,9 +31,15 @@ export class InspectorViewProvider implements vscode.WebviewViewProvider {
 
     this.view.webview.html = `
       <html>
+        <head>
+          <style>
+            .lemma {
+              font-variant-caps: small-caps;
+            }
+          </style>
+        </head>
         <body>
-          <h2>${escapeHtml(data.lemma ?? "(sans lemme)")}</h2>
-          <p><strong>IPA :</strong> ${escapeHtml(data.ipa ?? "—")}</p>
+          <h2><span class="lemma">${escapeHtml(data.lemma ?? "??")}</span> /${escapeHtml(data.ipa ?? "??")}/</h2>
           <p><strong>Erreurs :</strong> ${data.errors}</p>
           <p><strong>Avertissements :</strong> ${data.warnings}</p>
 
