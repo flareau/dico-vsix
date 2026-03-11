@@ -34,7 +34,7 @@ export interface AnnotationNode {
 
 export interface FlCallNode {
   name: string;
-  args: string[];
+  value: string;
   raw: string;
   range: Range;
 }
@@ -60,7 +60,7 @@ export interface CompiledEntry {
   sections: Record<string, string[]>;
   fls: Array<{
     name: string;
-    args: string[];
+    value: string;
     sectionIndex: number;
   }>;
   annotations: AnnotationNode[];

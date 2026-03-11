@@ -14,7 +14,7 @@ export function compileEntry(ast: EntryAst, diagnostics: DiagnosticLike[]): Comp
     fls: ast.sections.flatMap((section, index) =>
       (section.flCalls ?? []).map((fl) => ({
         name: fl.name,
-        args: fl.args,
+        value: fl.value,
         sectionIndex: index
       }))
     ),

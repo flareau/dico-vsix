@@ -47,7 +47,7 @@ export class InspectorViewProvider implements vscode.WebviewViewProvider {
           <h3>Fonctions lexicales</h3>
           <ul>
             ${data.fls
-              .map((fl) => `<li>${escapeHtml(fl.name)}(${escapeHtml(fl.args.join(", "))})</li>`)
+              .map((fl) => `<li>${escapeHtml(fl.name)}(${escapeHtml(fl.value)})</li>`)
               .join("")}
           </ul>
 

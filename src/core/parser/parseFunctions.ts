@@ -1,87 +1,22 @@
 import { FlCallNode } from "../types";
+import { LEXICAL_FUNCTION_PATTERNS } from "../lexicalFunctions";
 import { stripInlineComment } from "./commentSyntax";
 
-const SIMPLE_LFS = [
-  "\\[Magn",
-  "Qual1\\]",
-  "f",
-  "\\{[^{}]+?\\}",
-  "Q",
-  "Syn",
-  "Anti",
-  "Non",
-  "Conv[1-9]{2,}",
-  "Gener",
-  "Figur",
-  "Contr",
-  "S0",
-  "V0",
-  "A0",
-  "Adv0",
-  "Claus",
-  "Pred",
-  "S[1-9]",
-  "Equip",
-  "Cap",
-  "S_?(instr|med|mod|loc|res)",
-  "A[1-9]",
-  "Able[1-9]",
-  "Qual[1-9]",
-  "Adv[1-9]",
-  "Sing",
-  "Mult",
-  "Imper",
-  "Perf",
-  "Imperf",
-  "Result[1-9]",
-  "Germ",
-  "Culm",
-  "Epit",
-  "Redun",
-  "Magn",
-  "Magn[1-9]",
-  "--quant",
-  "--temp",
-  "Ver",
-  "Bon2?",
-  "Degrad",
-  "Plus",
-  "Minus",
-  "Loc_?(in|ad|ab)",
-  "Instr",
-  "Propt[1-9]",
-  "Copul",
-  "Oper(\\d|[1-9]+(\\+[1-9]+)?)",
-  "Func(\\d|[1-9]+(\\+[1-9]+)?)",
-  "Labor[1-9]{2}",
-  "Real(\\d|[1-9]+(\\+[1-9]+)?)",
-  "Fact(\\d|[1-9]+(\\+[1-9]+)?)",
-  "Labreal[1-9α]{2}",
-  "Prepar",
-  "Incep",
-  "Fin",
-  "Cont",
-  "Prox",
-  "Obstr",
-  "Stop",
-  "Excess",
-  "Caus([1-9α](\\+[1-9])?)?",
-  "Liqu([1-9α](\\+[1-9])?)?",
-  "Perm([1-9α](\\+[1-9])?)?",
-  "Son",
-  "Manif",
-  "Involv",
-  "--Sympt[1-3]{2,3}"
-];
-
-const SIMPLE_LF_RE = new RegExp(`^(${SIMPLE_LFS.join("|")})+$`, "u");
+const LF_ATOM_RE = `(?:${LEXICAL_FUNCTION_PATTERNS.join("|")})`;
+const SIMPLE_LF_RE = new RegExp(`^(?:${LF_ATOM_RE})+$`, "u");
+const LF_LINE_RE =
+  /^([+\-]\s*)?((\w+\s*:\s*)?[\w/+\s'\-[\]α~^\{\}]+?)\s*=\s*(\[[~ \w'\-#=.+]+\])?\s*(@?\s*[\w#\-' ~]+?)\s*(\[[~ \w'\-#=.+]+\])?$/u;
 
 function normalizeFn(rawFn: string): string {
-  return rawFn.replace(/ *([+/:]) */gu, "$1").trim();
+  return rawFn.replace(/ *([+:/]) */gu, "$1").trim();
 }
 
 function validLfFn(fn: string): boolean {
-  const parts = fn.split("/").flatMap((chunk) => chunk.split("+")).map((p) => p.trim()).filter(Boolean);
+  const parts = fn
+    .split("/")
+    .flatMap((chunk) => chunk.split("+"))
+    .map((p) => p.trim())
+    .filter(Boolean);
   return parts.length > 0 && parts.every((p) => SIMPLE_LF_RE.test(p));
 }
 
@@ -92,18 +27,13 @@ function stripTrailingExample(line: string): string {
 
 function parseLfLine(line: string): { fn: string; val: string } | null {
   const core = stripTrailingExample(line);
-  const match = core.match(/^([+\-]\s*)?(.+?)\s*=\s*(.+)$/u);
+  const match = core.match(LF_LINE_RE);
   if (!match) return null;
 
-  const rawFn = normalizeFn(match[2]).replace(/^\w+:/u, "");
+  const rawFn = normalizeFn(match[2] ?? "");
   if (!validLfFn(rawFn)) return null;
 
-  let rhs = (match[3] ?? "").trim();
-  rhs = rhs.replace(/^\[[^\]]+\]\s*/u, "").trim();
-  rhs = rhs.replace(/\s*\[[^\]]+\]\s*$/u, "").trim();
-  if (!rhs) return null;
-
-  const rawVal = rhs.replace(/^@\s*/u, "").replace(/\s+/gu, " ").trim();
+  const rawVal = (match[5] ?? "").trim();
   if (!rawVal) return null;
 
   return { fn: rawFn, val: rawVal };
@@ -124,7 +54,7 @@ export function parseFunctionsInLines(lines: string[], startLine: number): FlCal
     const endChar = startChar === -1 ? source.length : startChar + parsed.fn.length;
     results.push({
       name: parsed.fn,
-      args: [parsed.val],
+      value: parsed.val,
       raw: line,
       range: {
         start: { line: startLine + i, character: Math.max(0, startChar) },
